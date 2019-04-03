@@ -1,4 +1,8 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+- https://launchlibrary.net/ - api for launches
+- https://popmotion.io/pose/ - animation library
+- https://github.com/arscan/encom-globe - globe data
+- https://developers.google.com/maps/documentation/geocoding/start - geocoding
 
 ## Available Scripts
 
