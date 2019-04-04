@@ -1,0 +1,19 @@
+body {
+  margin: 0 !important;
+  background-color: black;
+  color: white;
+  overflow: hidden;
+}
+
+#react_app {
+  z-index: 11;
+  width: 100vw;
+  height: 100vh;
+}
+
+#globe {
+  z-index: 10;
+  margin: 0;
+  padding: 0;
+  opacity: 0.5;
+}

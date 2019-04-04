@@ -93,3 +93,5 @@ const start = () => {
 }
 
 createGlobe()
+
+window.addEventListener( 'resize', onWindowResize, false )

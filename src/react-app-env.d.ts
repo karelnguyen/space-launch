@@ -1,5 +1,5 @@
 /// <reference types="react-scripts" />
-// 
+//
 // // import original module declarations
 // import 'styled-components'
 //
