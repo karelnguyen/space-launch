@@ -3,9 +3,11 @@ body {
   background-color: black;
   color: white;
   overflow: hidden;
+  font-family: 'Archivo Narrow', sans-serif;
 }
 
 #react_app {
+  position: absolute;
   z-index: 11;
   width: 100vw;
   height: 100vh;

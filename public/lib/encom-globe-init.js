@@ -2,7 +2,6 @@
  * ENCOM Globe was created by Rob Scanlon.
  * Permission for personal usage granted. see: https://github.com/arscan/encom-globe/
  */
-// TODO: Refactor jQuery parts
 
 let globe = false
 let globeCount = 0
@@ -18,9 +17,13 @@ const createGlobe = () => {
    * Detecking, if there is an old Globe to delete during initializing
    * a new Globe
    */
-   $("#globe canvas").remove();
-   if($("#globe-dd:checked").length){
-       newData = data.slice();
+   if (document.querySelector("#globe canvas")) {
+     const el = document.querySelector("#globe canvas");
+     el.parentNode.removeChild(el);
+   }
+
+   if (document.querySelector("#globe-dd:checked")) {
+     if (document.querySelector("#globe-dd:checked").length) newData = data.slice();
    }
 
   /**
@@ -33,20 +36,20 @@ const createGlobe = () => {
       font: 'Inconsolata',
       data: newData, // copy the data array
       tiles: grid.tiles,
-      baseColor: '#ffcc00',
-      markerColor: '#ffcc00',
-      pinColor: '#8FD8D8',
+      baseColor: '#42D6CA',
+      markerColor: '#42D6CA',
+      pinColor: '#ffcc00',
       satelliteColor: '#ff0000',
       scale: 1,
       dayLength: 28000,
-      introLinesDuration: 2000,
+      introLinesDuration: 1000,
       maxPins: 500,
       maxMarkers: 4,
       viewAngle: 0.1
     }
   )
 
-  $("#globe").append(globe.domElement)
+  document.getElementById("globe").appendChild(globe.domElement)
   globe.init(start)
 }
 
@@ -89,9 +92,22 @@ const animate = () => {
 }
 
 const start = () => {
-  if (globeCount == 1) animate()
+  if (globeCount === 1) {
+    animate()
+  }
 }
 
-createGlobe()
+/**
+ * Load web fonts before creating globe (allow globe to use fonts)
+ */
+// WebFont.load({
+//     custom: {
+//         families: [ "Inconsolata" ]
+//     },
+//     active: function() {
+//       createGlobe()
+//     }
+// });
 
+createGlobe()
 window.addEventListener( 'resize', onWindowResize, false )
