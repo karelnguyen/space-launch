@@ -1,6 +1,10 @@
 
 - https://launchlibrary.net/ - api for launches
+
 - https://popmotion.io/pose/ - animation library
+- https://animejs.com/ - anime js
+- https://threejs.org - three js (working with 3D objects) 
+
 - https://github.com/arscan/encom-globe - globe data
 - https://developers.google.com/maps/documentation/geocoding/start - geocoding
 
